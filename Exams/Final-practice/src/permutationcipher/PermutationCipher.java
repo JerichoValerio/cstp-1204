@@ -9,21 +9,36 @@ public class PermutationCipher {
 	 * rounds indicated.
 	 * 
 	 * @param plaintext
-	 *            the text to encrypt.
+	 *                         the text to encrypt.
 	 * @param permutationArray
-	 *            the array the specifies how to permute the plain text. A
-	 *            suitable permutation array must be equal in length to the
-	 *            plain text and must be a permutation of integers in [0 ..
-	 *            permutationArray.length-1].
+	 *                         the array the specifies how to permute the plain
+	 *                         text. A
+	 *                         suitable permutation array must be equal in length to
+	 *                         the
+	 *                         plain text and must be a permutation of integers in
+	 *                         [0 ..
+	 *                         permutationArray.length-1].
 	 * @param rounds
-	 *            the number of rounds of encryption needed; rounds should be at
-	 *            least 1.
+	 *                         the number of rounds of encryption needed; rounds
+	 *                         should be at
+	 *                         least 1.
 	 * @return the encrypted text (ciphertext).
 	 * @throws IllegalKeyException
-	 *             if the permutation array is not suitable.
+	 *                             if the permutation array is not suitable.
 	 */
 	public static String encrypt(String plaintext, int[] permutationArray, int rounds) throws IllegalKeyException {
-		// TODO: Implement this methods
+		// todo: Implement this methods
+
+		String encryptedString = plaintext;
+
+		char[] letters = new char[plaintext.length()];
+
+		while (rounds > 0) {
+			for (int i = 0; i < encryptedString.length(); i++) {
+
+				letters[permutationArray[i]] = encryptedString.charAt(i);
+			}
+		}
 		return "";
 	}
 
