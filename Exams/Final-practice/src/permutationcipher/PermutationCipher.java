@@ -49,5 +49,4 @@ public class PermutationCipher {
 		// letters[2] = b first iteration
 		// letters[0] = c first iteration
 	}
-
 }
