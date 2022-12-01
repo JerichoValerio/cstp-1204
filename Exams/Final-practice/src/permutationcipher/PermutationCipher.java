@@ -37,9 +37,17 @@ public class PermutationCipher {
 			for (int i = 0; i < encryptedString.length(); i++) {
 
 				letters[permutationArray[i]] = encryptedString.charAt(i);
+
 			}
+			rounds--;
+
+			encryptedString = String.valueOf(letters);
 		}
-		return "";
+		return encryptedString;
+		// return "";
+		// letters[1] = a first iteration
+		// letters[2] = b first iteration
+		// letters[0] = c first iteration
 	}
 
 }
