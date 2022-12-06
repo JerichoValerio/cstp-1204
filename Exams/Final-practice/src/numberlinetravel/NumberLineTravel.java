@@ -22,22 +22,22 @@ public class NumberLineTravel {
 	 */
 	public static int howManyCitiesCanIVisit(int[] x, int k) {
 		// todo: Implement this method
-		Set<Integer> vistedSet = new HashSet<Integer>();
-		vistedSet.add(x[0]);
+		Set<Integer> visitedSet = new HashSet<Integer>();
+		visitedSet.add(x[0]);
 		int currentCity = x[0];
 		for (int i = 1; i < x.length; i++) {
-			if (valid(x[i], k, vistedSet) && !vistedSet.contains(x[i])) {
+			if (valid(x[i], k, visitedSet) && !visitedSet.contains(x[i])) {
 				currentCity = x[i];
-				vistedSet.add(x[i]);
+				visitedSet.add(x[i]);
 				i = 0;
 			}
 		}
-		return vistedSet.size() - 1;
+		return visitedSet.size() - 1;
 	}
 
-	private static boolean valid(int i, int k, Set<Integer> vistedSet) {
+	private static boolean valid(int i, int k, Set<Integer> visitedSet) {
 		boolean result = false;
-		for (int yCity : vistedSet) {
+		for (int yCity : visitedSet) {
 			if (Math.abs(i - yCity) <= k) {
 				result = true;
 			}
