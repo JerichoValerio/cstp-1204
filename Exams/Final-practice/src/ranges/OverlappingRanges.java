@@ -22,5 +22,18 @@ public class OverlappingRanges {
                                         ArrayList<Integer> endPoints) throws NoOverlapException {
         // TODO: Implement this method
 
-        if (startPoints == null endPoints)
+        if (startPoints == null || endPoints  == null) {
+            throw new IllegalArgumentException();
+        }
+        if (startPoints.isEmpty() || endPoints.isEmpty()) {
+            throw new IllegalArgumentException();
+        }
+        if (int startPoints.size() != endPoints.size()){
+            throw new IllegalArgumentException();
+        }
+        for (int i = 0; i < startPoints.size(); i++){
+            if (startPoints.get(i) > endPoints.get(i)) {
+                throw new IllegalArgumentException();
+            } int [] arr = new int [1000];
+        }
     }
