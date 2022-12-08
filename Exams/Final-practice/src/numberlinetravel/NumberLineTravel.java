@@ -2,6 +2,8 @@ package numberlinetravel;
 
 import java.util.HashSet;
 import java.util.Set;
+
+import javax.swing.event.SwingPropertyChangeSupport;
 public class NumberLineTravel {
 
 	/**
@@ -45,5 +47,6 @@ public class NumberLineTravel {
 
 		return result;
 	}
+
 
 }
