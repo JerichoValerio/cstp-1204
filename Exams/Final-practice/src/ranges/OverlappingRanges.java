@@ -22,5 +22,5 @@ public class OverlappingRanges {
                                         ArrayList<Integer> endPoints) throws NoOverlapException {
         // TODO: Implement this method
 
-        if (startPoints == null)
+        if (startPoints == null endPoints)
     }
