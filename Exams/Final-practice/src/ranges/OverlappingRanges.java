@@ -1,6 +1,7 @@
 package ranges;
 
 import java.util.ArrayList;
+import java.util.Set;
 
 public class OverlappingRanges {
 
@@ -24,15 +25,25 @@ public class OverlappingRanges {
 
         int validRange = n[3];
         for (int i = 1; i < x.length; i++) {
+            Set<Integer> visitedSet;
             if (valid(x[i], k, visitedSet) && !visitedSet.contains(x[i])) {
                 validRange = x[i];
                 endPoints.add(x[i]);
             }
             return endPoints.size() - 1;
         }
-
-
         return 0;
+    }
+
+    private static boolean valid(int i, int k, Set<Integer> endPoints) {
+        boolean finalResult = false;
+        for (int invalidRange : endPoints) {
+            if (Math.abs(i - invalidRange) <= k) {
+                finalResult = true;
+            }
+        }
+
+        return finalResult;
     }
 
 }
