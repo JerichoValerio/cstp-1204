@@ -19,31 +19,8 @@ public class OverlappingRanges {
 
 
     public static Integer maxOverlapInt(ArrayList<Integer> startPoints,
-                                        ArrayList<Integer> endPoints) throws ranges.NoOverlapException {
+                                        ArrayList<Integer> endPoints) throws NoOverlapException {
         // TODO: Implement this method
-        endPoints.add(n[3]);
 
-        int validRange = n[3];
-        for (int i = 1; i < x.length; i++) {
-            Set<Integer> visitedSet;
-            if (valid(x[i], k, visitedSet) && !visitedSet.contains(x[i])) {
-                validRange = x[i];
-                endPoints.add(x[i]);
-            }
-            return endPoints.size() - 1;
-        }
-        return 0;
+        if (startPoints == null)
     }
-
-    private static boolean valid(int i, int k, Set<Integer> endPoints) {
-        boolean finalResult = false;
-        for (int invalidRange : endPoints) {
-            if (Math.abs(i - invalidRange) <= k) {
-                finalResult = true;
-            }
-        }
-
-        return finalResult;
-    }
-
-}
