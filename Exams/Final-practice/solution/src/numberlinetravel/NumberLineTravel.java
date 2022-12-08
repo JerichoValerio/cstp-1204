@@ -22,7 +22,7 @@ public class NumberLineTravel {
 	 *         x[0] is not included in the count.
 	 */
 	public static int howManyCitiesCanIVisit(int[] x, int k) {
-		// TODO: Implement this method
+		// todo: Implement this method
 	    Set<Integer> vistedSet = new HashSet<Integer>();
 	    vistedSet.add(x[0]);
 	    int currentCity = x[0];
