@@ -31,7 +31,35 @@ public class FibTransform {
 		Set <Integer> set = new HashSet<Integer>();
 		set.add(1);
 		set.add(2);
-		return false; // change this
+		int max = 2;
+		int min = 1;
+
+		while (max < n) {
+			int temp = max;
+			max = max + min;
+			min = temp;
+			set.add(max);
+		}
+		if(set.contains(n)){
+			return true;
+
+		}
+		int count = 0;
+		int temp = n;
+		while (temp < 2) {
+			if (set.contains(temp)){
+				count++;
+				temp = temp - temp;
+			} else {
+				temp = temp -1;
+				count++;
+			}
+		}
+		if (count <=m){
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	/**
@@ -50,6 +78,12 @@ public class FibTransform {
 	 */
 	public static boolean isPossible(int n, int m) {
 		// TODO: Implement this method
+		if (n ==0 && m ++ 0){
+			return true;
+		} else if (n == 0 || m ==0){
+			return false;
+		}
+
 		return false; // change this
 	}
 
