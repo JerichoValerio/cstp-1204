@@ -1,5 +1,4 @@
 package ranges;
-
 public class NoOverlapException extends Exception {
 
 	/**
