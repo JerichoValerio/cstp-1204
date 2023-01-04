@@ -20,15 +20,6 @@ class Main {
     aStack.pop();
     System.out.println(aStack.peek()); // Expected -266
 
-    //Test case 4 - test the size of the stack
-    aStack.push(1);
-    aStack.getSize();
-
-    //test case 5 - test does contain of a stack
-    aStack.contains(1);
-
-    //test case 6 - test does contain fo a Stack
-    aStack.isEmpty(); // expected false
   }
-  //testing
+
 }
