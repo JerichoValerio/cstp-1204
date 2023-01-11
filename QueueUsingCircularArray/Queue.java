@@ -39,6 +39,10 @@ public class Queue {
     return num == 0;
   }
 
+  // boolean contains(int target) {// O(n)
+  //   return false;
+  // }
+
   boolean contains(int element) {
     for (int i = 0; i < num; i++) {
       if (arr[(front + i) % MAXSIZE] == element)
@@ -52,7 +56,6 @@ public class Queue {
       System.out.println(arr[(front + i) % MAXSIZE]);
     }
   }
-  
 
   public static void main(String[] args) {
     Queue q = new Queue();
@@ -68,7 +71,10 @@ public class Queue {
     System.out.println(q.getFront());// 7
     q.contains(10);// false
     q.isEmpty();// false
-    q.size(); //5 
-    q.printAll();// start from front 
+    q.size(); // 5
+    q.printAll();// start from front
+
+    // shifting the elements left and right whenever you insert or remove an element
+
   }
 }
