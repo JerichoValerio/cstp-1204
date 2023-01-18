@@ -32,6 +32,7 @@ public class PriorityQueueUsingArrays {
       if (arr[i] < min) {
         min = arr[i];
         minIndex = i;
+        numberOfElements--;
       }
     }
 
@@ -52,6 +53,5 @@ public class PriorityQueueUsingArrays {
 
     System.out.println(aPQueue.peek());// 1 most priority
     aPQueue.remove();// removing 1 most priority
-
   }
 }
