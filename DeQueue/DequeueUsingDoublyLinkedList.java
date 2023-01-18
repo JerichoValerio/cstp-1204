@@ -41,16 +41,23 @@ public class DequeueUsingDoublyLinkedList {
   }
 
   void removeFirst() {
-    if (front != null)
+    if (front != null) {
+      DoublyNode tmp = front;
       front = front.next;
-      
+      tmp.next = null;
+    }
   }
 
   void removeLast() {
-    back = back.prev;
+    if (back != null) {
+      back = back.prev;
+      back.next.prev = null;
+      back.next = null;
+    }
   }
 
   int getFirst() {
+    //0(1)
     return front.data;
   }
 
