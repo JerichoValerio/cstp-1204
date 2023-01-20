@@ -49,5 +49,16 @@ class ListUsingArray {
     return numberOfElements;
   }
 
-  p   
+  public static void main(String[] args) {
+    ListUsingArray x = new ListUsingArray();
+    // Position starts from 1
+    x.add(10);
+    x.add(20);
+    x.add(30);
+    System.out.println(x.get(3));// 30
+    x.add(1, 5);
+    System.out.println(x.get(3));// 20
+    x.remove(3); // 20
+    System.out.println(x.size());// 3
+  }
 }

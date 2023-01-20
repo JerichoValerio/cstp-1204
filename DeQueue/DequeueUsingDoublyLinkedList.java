@@ -10,6 +10,7 @@ public class DequeueUsingDoublyLinkedList {
   }
 
   void addFirst(int anItem) {
+    // O(1)
     DoublyNode aNewNode = new DoublyNode();
     aNewNode.data = anItem;
 
@@ -26,6 +27,7 @@ public class DequeueUsingDoublyLinkedList {
   }
 
   void addLast(int anItem) {
+    // O(1)
     DoublyNode aNewNode = new DoublyNode();
     aNewNode.data = anItem;
 
@@ -44,6 +46,8 @@ public class DequeueUsingDoublyLinkedList {
     if (front != null) {
       DoublyNode tmp = front;
       front = front.next;
+      front.prev = null;
+
       tmp.next = null;
     }
   }
@@ -57,11 +61,12 @@ public class DequeueUsingDoublyLinkedList {
   }
 
   int getFirst() {
-    //0(1)
+    // O(1)
     return front.data;
   }
 
   int getLast() {
+    // O(1)
     return back.data;
   }
 

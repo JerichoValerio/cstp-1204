@@ -1,15 +1,29 @@
 package DeQueue;
 
+import static org.junit.Assert.assertEquals;
+
 public class ListUsingDoublyLinkedList {
   DoublyNode front;
   DoublyNode back;
   int numberOfElements = 0;
 
+
+  void test() {
+    ListUsingDoublyLinkedList x = new ListUsingDoublyLinkedList();
+    x.add(10);
+    x.add(20);
+    x.add(30);
+    assertEquals(30, x.get(3)); // 30
+    x.add(1, 5);
+    assertEquals(20, x.get(3)); // 20
+    x.remove(3); // 20
+  }
+  
   ListUsingDoublyLinkedList() {
 
   }
 
-  //helper function
+  // helper function
   DoublyNode getNode(int position) {
     if (position <= numberOfElements) {
       DoublyNode tmp = front;
@@ -26,10 +40,12 @@ public class ListUsingDoublyLinkedList {
   void add(int element) {
     DoublyNode aNewNode = new DoublyNode();
     aNewNode.data = element;
+
     back.next = aNewNode;
-    aNewNode.next;
+    aNewNode.prev = back;
 
     back = aNewNode;
+
     numberOfElements++;
   }
 
@@ -45,27 +61,28 @@ public class ListUsingDoublyLinkedList {
     x.prev = aNewNode;
 
     numberOfElements++;
+
   }
 
   void remove(int position) {
-
+    
   }
 
-  void get(int position) {
+  int get(int position) {
     return getNode(position).data;
   }
 
   public static void main(String[] args) {
-    ListUsingArray x = new ListUsingArray();
+    ListUsingDoublyLinkedList x = new ListUsingDoublyLinkedList();
     // Position starts from 1
     x.add(10);
     x.add(20);
     x.add(30);
-    System.out.println(x.get(3));// 30
+    System.out.println(x.get(30));// 30
     x.add(1, 5);
     System.out.println(x.get(3));// 20
     x.remove(3); // 20
-    System.out.println(x.size());// 3
-
+    // System.out.println(x.size());// 3
   }
+
 }
