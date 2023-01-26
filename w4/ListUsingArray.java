@@ -1,4 +1,4 @@
-class ListUsingArray implements List{
+class ListUsingArray implements List {
   Integer[] arr;
   int numberOfElements;
   final int ARR_SIZE = 11;

@@ -16,7 +16,7 @@ public interface List<E> {
   public void remove(int position) throws RemovalOnAnEmptyListException;
 
   // add an element to specific position in the list
-  public E get(int position);
+  public int get(int position);
 
   // get the size of the list
   public int size();
