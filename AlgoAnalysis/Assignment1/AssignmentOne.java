@@ -1,4 +1,5 @@
-package 1305.DeQueue.Assignment1;
+package AlgoAnalysis.Assignment1;
+
 
 public class AssignmentOne {
   
