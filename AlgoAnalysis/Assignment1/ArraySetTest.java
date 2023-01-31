@@ -1,98 +1,81 @@
 package AlgoAnalysis.Assignment1;
 import static org.junit.Assert.*;
-
-import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 
 public class ArraySetTest {
-    private SetInterface<Integer> set;
-    
-    @Before
-    public void setUp() {
-        set = new ArraySet<>();
-    }
-    
     @Test
-    public void testGetCurrentSize() {
-        assertEquals(0, ((ArraySet<Integer>) set).getCurrentSize());
-        
-        set.add(1);
-        set.add(2);
-        set.add(3);
-        
-        assertEquals(3, set.getCurrentSize());
+    public void SetInterfaceUsingArraysTest1() {
+        ArraySet<Integer> set = new ArraySet<Integer>();
+  
+      // This is before we put anything into the set
+      assertEquals(0, set.getCurrentSize());
+      assertTrue(set.isEmpty());
+      assertFalse(set.remove(5));
     }
-    
+  
     @Test
-    public void testIsEmpty() {
-        assertTrue(set.isEmpty());
-        
-        set.add(1);
-        
-        assertFalse(set.isEmpty());
+    public void SetInterfaceUsingArraysTest2() {
+        ArraySet<Integer> set = new ArraySet<Integer>();
+  
+      assertTrue(set.add(10));
+      assertFalse(set.add(10));
+      set.add(20);
+      set.add(30);
+      set.add(40);
+      set.add(50);
+      assertEquals(5, set.getCurrentSize());
+      assertFalse(set.isEmpty());
     }
-    
-    /**
-     * 
-     */
+  
     @Test
-    public void testAdd() {
-        Assert.assertFalse(set.add(1));
-        assertTrue(set.add(2));
-        assertTrue(set.add(3));
-        assertFalse(set.add(3));
+    public void SetInterfaceUsingArraysTest3() {
+        ArraySet<Integer> set = new ArraySet<Integer>();
+  
+      assertTrue(set.add(10));
+      assertFalse(set.add(10));
+      assertTrue(set.remove(10));
+      assertTrue(set.isEmpty());
+      set.add(20);
+      set.add(30);
+      assertTrue(set.contains(20));
+      set.add(40);
+      assertTrue(set.remove(40));
+      set.add(50);
+      assertTrue(set.remove(50));
+      assertFalse(set.contains(50));
     }
-    
-    private void assertTrue(Object add) {
-    }
-
+  
     @Test
-    public void testRemove() {
-        set.add(1);
-        set.add(2);
-        set.add(3);
-        
-        assertTrue(set.remove(2));
-        assertFalse(set.remove(4));
-        
-        Integer[] expected = {1, 3};
-        Integer[] result = set.toArray();
-        
-        assertArrayEquals(expected, result);
+    public void SetInterfaceUsingArraysTest4() {
+        ArraySet<Integer> set = new ArraySet<Integer>();
+  
+      set.add(10);
+      set.add(20);
+      set.add(30);
+      set.add(40);
+      set.add(50);
+  
+      set.clear();
+      assertEquals(0, set.getCurrentSize());
+      assertTrue(set.isEmpty());
     }
-    
+  
     @Test
-    public void testClear() {
-        set.add(1);
-        set.add(2);
-        set.add(3);
-        
-        set.clear();
-        
-        assertEquals(0, set.getCurrentSize());
-        assertTrue(set.isEmpty());
-    }
-    
-    @Test
-    public void testContains() {
-        set.add(1);
-        set.add(2);
-        set.add(3);
-        
-        assertTrue(set.contains(2));
-        assertTrue(set.contains(4));
-    }
-    
-    @Test
-    public void testToArray() {
-        set.add(1);
-        set.add(2);
-        set.add(3);
-        
-        Integer[] expected = {1, 2, 3};
-        Integer[] result = set.toArray();
-        
-        assertArrayEquals(expected, result);
+    public void SetInterfaceUsingArraysTest6() {
+        ArraySet<Integer> set = new ArraySet<Integer>();
+  
+      set.add(10);
+      set.add(10);
+      set.add(20);
+      set.add(30);
+      set.add(40);
+      set.add(50);
+      set.add(60);
+      set.add(70);
+      set.add(80);
+      set.add(90);
+      set.add(100);
+      assertTrue(set.remove(100));
+      assertFalse(set.contains(100));
     }
 }

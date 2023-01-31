@@ -2,18 +2,18 @@ package AlgoAnalysis.Assignment1;
 
 public interface SetInterface<T> {
 
-  boolean add(T newEntry);
+  public boolean add(T newEntry);
 
-  boolean remove(T anEntry);
+  public boolean remove(T anEntry);
 
-  boolean isEmpty();
+  public boolean isEmpty();
 
-  void clear();
+  public void clear();
 
-  int getCurrentSize();
+  public int getCurrentSize();
 
-  boolean contains(T anEntry);
+  public boolean contains(T anEntry);
 
-  T[] toArray();
+  public T[] toArray();
 
 }

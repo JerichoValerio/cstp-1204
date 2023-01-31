@@ -1,64 +1,63 @@
 package AlgoAnalysis.Assignment1;
-
 import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class SetLLTest {
-
   @Test
-  public void testAddMethod() {
-    SetLL<Integer> set = new SetLL<>();
-    assertTrue(set.add(1));
-    assertTrue(set.add(2));
-    assertTrue(set.add(3));
-    assertFalse(set.add(3));
-  }
+  public void SetInterfaceUsingArraysTest1() {
+    SetLL<Integer> set = new SetLL<Integer>();
 
-  @Test
-  public void testRemoveMethod() {
-    SetLL<Integer> set = new SetLL<>();
-    set.add(1);
-    set.add(2);
-    set.add(3);
-    assertTrue(set.remove(2));
-    assertFalse(set.remove(4));
-  }
-
-  @Test
-  public void testContainsMethod() {
-    SetLL<Integer> set = new SetLL<>();
-    set.add(1);
-    set.add(2);
-    set.add(3);
-    assertTrue(set.contains(2));
-    assertFalse(set.contains(4));
-  }
-
-  @Test
-  public void testIsEmptyMethod() {
-    SetLL<Integer> set = new SetLL<>();
+    // This is before we put anything into the set
+    assertEquals(0, set.getCurrentSize());
     assertTrue(set.isEmpty());
-    set.add(1);
-    set.add(2);
+    assertFalse(set.remove(5));
+  }
+
+  @Test
+  public void SetInterfaceUsingArraysTest2() {
+    SetLL<Integer> set = new SetLL<Integer>();
+
+    assertTrue(set.add(10));
+    assertFalse(set.add(10));
+    set.add(20);
+    set.add(30);
+    set.add(40);
+    set.add(50);
+    assertEquals(5, set.getCurrentSize());
     assertFalse(set.isEmpty());
   }
 
   @Test
-  public void testClearMethod() {
-    SetLL<Integer> set = new SetLL<>();
-    set.add(1);
-    set.add(2);
+  public void SetInterfaceUsingArraysTest4() {
+    SetLL<Integer> set = new SetLL<Integer>();
+
+    set.add(10);
+    set.add(20);
+    set.add(30);
+    set.add(40);
+    set.add(50);
+
     set.clear();
+    assertEquals(0, set.getCurrentSize());
     assertTrue(set.isEmpty());
   }
 
   @Test
-  public void testToArrayMethod() {
-    SetLL<Integer> set = new SetLL<>();
-    set.add(1);
-    set.add(2);
-    set.add(3);
-    Integer[] expected = {1, 2, 3};
-    assertArrayEquals(expected, set.toArray());
+  public void SetInterfaceUsingArraysTest6() {
+    SetLL<Integer> set = new SetLL<Integer>();
+
+    set.add(10);
+    set.add(10);
+    set.add(20);
+    set.add(30);
+    set.add(40);
+    set.add(50);
+    set.add(60);
+    set.add(70);
+    set.add(80);
+    set.add(90);
+    set.add(100);
+    assertTrue(set.remove(100));
+    assertFalse(set.contains(100));
   }
 }

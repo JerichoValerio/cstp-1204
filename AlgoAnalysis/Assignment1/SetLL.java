@@ -1,58 +1,90 @@
 package AlgoAnalysis.Assignment1;
 
-import java.util.LinkedList;
-
 public class SetLL<T> implements SetInterface<T> {
-  private LinkedList<T> list;
+  Node<T> head;
+  Node<T> tail;
+  int size;
 
+  
   public SetLL() {
-    list = new LinkedList<T>();
+    head = null;
+    tail = null;
+    size = 0;
   }
 
   public int getCurrentSize() {
-    return list.size();
+    return size;
   }
 
   public boolean isEmpty() {
-    return list.isEmpty();
-  }
-
-  public boolean add(T newEntry) {
-    if (!list.contains(newEntry)) {
-      list.add(newEntry);
+    if (size == 0) {
       return true;
     }
     return false;
   }
 
+  public boolean add(T newEntry) {
+    if (contains(newEntry)) {
+      return false;
+    }
+    Node<T> newNode = new Node<T>();
+    newNode.data = newEntry;
+    if (head == null) {
+      head = newNode;
+      tail = newNode;
+    } else {
+      tail.next = newNode;
+      tail = newNode;
+    }
+    size++;
+    return true;
+  }
+
   public boolean remove(T anEntry) {
-    return list.remove(anEntry);
+    Node<T> current = head;
+    Node<T> previous = null;
+    while (current != null) {
+      if (current.data == anEntry) {
+        if (previous == null) {
+          head = current.next;
+        } else {
+          previous.next = current.next;
+        }
+        size--;
+        return true;
+      }
+      previous = current;
+      current = current.next;
+    }
+    return false;
   }
 
   public void clear() {
-    list.clear();
+    head = null;
+    tail = null;
+    size = 0;
   }
 
   public boolean contains(T anEntry) {
-    return list.contains(anEntry);
-  }
-
-  @SuppressWarnings("unchecked")
-  public T[] toArray() {
-    return (T[]) list.toArray();
-  }
-
-  @Override
-  public void add(int i) {
-    // TODO Auto-generated method stub
-
-    
-    
-  }
-
-  @Override
-  public boolean remove(int i) {
-    // TODO Auto-generated method stub
+    Node<T> current = head;
+    while (current != null) {
+      if (current.data == anEntry) {
+        return true;
+      }
+      current = current.next;
+    }
     return false;
+  }
+
+  public T[] toArray() {
+    T[] array = (T[]) new Object[size];
+    Node<T> current = head;
+    int i = 0;
+    while (current != null) {
+      array[i] = current.data;
+      current = current.next;
+      i++;
+    }
+    return array;
   }
 }
