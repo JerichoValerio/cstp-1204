@@ -17,3 +17,5 @@ public interface SetInterface<T> {
   public T[] toArray();
 
 }
+
+//this is Jericho assignment 1

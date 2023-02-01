@@ -1,7 +1,7 @@
 package AlgoAnalysis.Assignment1;
 
 
-//T is whatever user wants to use
+//T is whatever user wants to use (is a Generic)
 public class ArraySet<T> implements SetInterface<T> {
   public T[]arrayGlobal;
 

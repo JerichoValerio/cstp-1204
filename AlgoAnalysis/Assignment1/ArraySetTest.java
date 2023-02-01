@@ -4,7 +4,7 @@ import org.junit.Test;
 
 public class ArraySetTest {
     @Test
-    public void SetInterfaceUsingArraysTest1() {
+    public void SetInterfaceArraysTest1() {
         ArraySet<Integer> set = new ArraySet<Integer>();
   
       // This is before we put anything into the set
@@ -14,7 +14,7 @@ public class ArraySetTest {
     }
   
     @Test
-    public void SetInterfaceUsingArraysTest2() {
+    public void SetInterfaceArraysTest2() {
         ArraySet<Integer> set = new ArraySet<Integer>();
   
       assertTrue(set.add(10));
@@ -28,7 +28,7 @@ public class ArraySetTest {
     }
   
     @Test
-    public void SetInterfaceUsingArraysTest3() {
+    public void SetInterfaceArraysTest3() {
         ArraySet<Integer> set = new ArraySet<Integer>();
   
       assertTrue(set.add(10));
@@ -46,7 +46,7 @@ public class ArraySetTest {
     }
   
     @Test
-    public void SetInterfaceUsingArraysTest4() {
+    public void SetInterfaceArraysTest4() {
         ArraySet<Integer> set = new ArraySet<Integer>();
   
       set.add(10);
@@ -61,7 +61,7 @@ public class ArraySetTest {
     }
   
     @Test
-    public void SetInterfaceUsingArraysTest6() {
+    public void SetInterfaceArraysTest6() {
         ArraySet<Integer> set = new ArraySet<Integer>();
   
       set.add(10);

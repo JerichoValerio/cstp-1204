@@ -4,17 +4,17 @@ import static org.junit.Assert.*;
 
 public class SetLLTest {
   @Test
-  public void SetInterfaceUsingArraysTest1() {
+  public void SetInterfaceUsingLLTest1() {
     SetLL<Integer> set = new SetLL<Integer>();
 
-    // This is before we put anything into the set
+    // This is before we put anything into the set //initialize
     assertEquals(0, set.getCurrentSize());
     assertTrue(set.isEmpty());
     assertFalse(set.remove(5));
   }
 
   @Test
-  public void SetInterfaceUsingArraysTest2() {
+  public void SetInterfaceUsingLLTest2() {
     SetLL<Integer> set = new SetLL<Integer>();
 
     assertTrue(set.add(10));
@@ -28,7 +28,7 @@ public class SetLLTest {
   }
 
   @Test
-  public void SetInterfaceUsingArraysTest4() {
+  public void SetInterfaceUsingLLTest4() {
     SetLL<Integer> set = new SetLL<Integer>();
 
     set.add(10);
@@ -43,7 +43,7 @@ public class SetLLTest {
   }
 
   @Test
-  public void SetInterfaceUsingArraysTest6() {
+  public void SetInterfaceUsingLLTest6() {
     SetLL<Integer> set = new SetLL<Integer>();
 
     set.add(10);
@@ -61,3 +61,5 @@ public class SetLLTest {
     assertFalse(set.contains(100));
   }
 }
+
+//done, passed the tests
