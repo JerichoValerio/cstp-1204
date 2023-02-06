@@ -32,7 +32,7 @@ public class LinearSearchJavaFirst {
     int linearIndex = linearSearch(arr, target);
     int binaryIndex = binarySearch(arr, target);
 
-    System.out.println("Linear search index: " + linearIndex);
-    System.out.println("Binary search index: " + binaryIndex);
+    System.out.println("First Implementation of Linear search index: " + linearIndex);
+    System.out.println("First Implementation of Binary search index: " + binaryIndex);
   }
 }
