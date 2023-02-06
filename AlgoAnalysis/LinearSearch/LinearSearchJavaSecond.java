@@ -27,7 +27,7 @@ public class LinearSearchJavaSecond {
   }
 
   public static void main(String[] args) {
-    int[] array = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20};
+    int[] array = { 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 };
     int target = 14;
     int linearIndex = linearSearch(array, target);
     int binaryIndex = binarySearch(array, target);

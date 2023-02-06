@@ -28,7 +28,7 @@ public class SortingAlgo {
       // in the green partition of the array
       int tmp = arr[i];
       int j = i;
-      while (j > 0 && arr[j-1] >  tmp) {
+      while (j > 0 && arr[j - 1] > tmp) {
         arr[j] = arr[j - 1];
         j--;
       }
