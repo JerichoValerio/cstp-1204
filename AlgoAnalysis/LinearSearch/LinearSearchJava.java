@@ -1,7 +1,7 @@
 package AlgoAnalysis.LinearSearch;
 
 public class LinearSearchJava {
-  
+
   static int linearSearch(int arr[], int target) {
     for (int i = 0; i < arr.length; i++) {
       if (arr[i] == target) {
@@ -33,6 +33,6 @@ public class LinearSearchJava {
     int result = binarySearch(arr, 23483, 0, arr.length - 1);
     System.out.println(result);// -1
     // if (result != -1)
-    //   System.out.println(result);// 4
+    // System.out.println(result);// 4
   }
 }
