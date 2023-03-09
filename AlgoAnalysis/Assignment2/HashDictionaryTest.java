@@ -7,6 +7,7 @@ public class HashDictionaryTest {
 
     private HashDictionary<String, Integer> dictionary;
 
+    
     @Before
     public void setUp() throws Exception {
         dictionary = new HashDictionary<>(4);
@@ -15,16 +16,19 @@ public class HashDictionaryTest {
         dictionary.put("three", 3);
     }
 
+
     @Test
     public void testPut() {
         dictionary.put("four", 4);
         assertEquals(Integer.valueOf(4), dictionary.get("four"));
     }
 
+
     @Test
     public void testGet() {
         assertEquals(Integer.valueOf(2), dictionary.get("two"));
     }
+
 
     @Test
     public void testRemove() {
@@ -32,6 +36,7 @@ public class HashDictionaryTest {
         assertNull(dictionary.get("two"));
         assertEquals(2, dictionary.getSize());
     }
+
 
     @Test
     public void testResize() {
