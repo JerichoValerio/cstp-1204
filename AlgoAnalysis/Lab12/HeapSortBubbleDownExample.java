@@ -3,6 +3,7 @@ package AlgoAnalysis.Lab12;
 public class HeapSortBubbleDownExample {
 
   public static void main(String[] args) {
+    // Input array
     int[] arr = { 12, 11, 13, 5, 6, 7 };
 
     System.out.println("Input array:");
@@ -15,6 +16,7 @@ public class HeapSortBubbleDownExample {
   }
 
   public static void heapSort(int[] arr) {
+    // Get the length of the array
     int n = arr.length;
 
     // Build max heap
