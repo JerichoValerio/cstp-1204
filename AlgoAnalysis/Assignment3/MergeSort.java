@@ -2,6 +2,8 @@ package AlgoAnalysis.Assignment3;
 
 public class MergeSort {
 
+  // Merge Sort (Recursively)
+
   public static void merge(int[] arr, int l, int m, int r) {
 
     int n1 = m - l + 1;
